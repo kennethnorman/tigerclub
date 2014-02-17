@@ -1,2 +1,2 @@
 @echo off
-ftp -s upload.ftp
+ftp -s:upload.ftp
