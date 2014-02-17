@@ -7,7 +7,7 @@ $("tc-trackListMsg").text("Working...");
 // Get the song list from the file list.txt
 var xmlhttp = sixistLibrary.GetXMLHTTPRequest();
 
-var sourceFile = "songlist.xml";
+var sourceFile = "songinfo.xml";
 xmlhttp.open("GET", sourceFile, true);
 
 // Process the song list into something we can output.
@@ -25,15 +25,19 @@ xmlhttp.onreadystatechange = function () {
 
         var xmlDoc = $.parseXML(xmlhttp.responseText), 
             xml=$(xmlDoc),
-            songs = xml.find("SongList");
+            songs = xml.find("SongInfo");
         $.each(songs.find("Song"), function(i, el) {
             var song = $(el),
                 artist = song.find("Artist").text(), 
-                track = song.find("Track").text();
-
-            songText = artist.trim() + " : " + track.trim();
-            list.appendChild(document.createTextNode(songText));
-            list.appendChild(document.createElement("br"));
+                track = song.find("Track").text(),
+                band = song.find("Band").text();
+			band= band.toLowerCase();
+			if (band.indexOf("tiger club") != -1)
+			{
+				songText = artist.trim() + " : " + track.trim();
+				list.appendChild(document.createTextNode(songText));
+				list.appendChild(document.createElement("br"));
+			}
         });
 
     }
