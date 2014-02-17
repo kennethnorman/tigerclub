@@ -15,7 +15,7 @@
 </head>
 
 
-<body class="tc-index" id="css-tc-body">
+<body class="tc-tracklist" id="css-tc-body">
 
 
 	<section class="intro" id="tc-intro" role="banner">
@@ -40,34 +40,15 @@
     <div class="column2" id="tc-column2">
         <div class="column1" id="tc-column1">
             <div class="info" id="tc-info">
-
-                <div class="infotext" id="tc-infotext" >
+               <div class="infotext" id="tc-infotext" >
   	                <div id="tc-infotext1" role="article">
-		                <h3>What sort of music do we play?</h3>
-		                <p>Anything and everything. If you want it, we'll play it. We already have an extensive set list, though, just in case you can't think of a killer track just now.</p>
-	                </div>
-
-	                <div id="tc-infotext2" role="article">
-		                <h3>Where can I see you play next?</h3>
-		                <p>The Ostrich, Peterborough - 21st February 2014</p>
-	                </div>
-
-	                <div id="tc-infotext3" role="article">
-		                <h3>How can I book you for my venue/function/event?</h3>
-		                <p>Send an email to <a href="mailto:tigerclub@sixist.co.uk">tigerclub@sixist.co.uk</a>.</p>
-	                </div>
-
-	                <div id="tc-infotext4" role="article">
-		                <h3>Video and Audio Gallery</h3>
-		                <p>Coming soon.</p>
-	                </div>
-
-	                <div id="tc-infotext5" role="article">
-		                <h3>The Band</h3>
-		                Ian Graham - Vox and Guitar<br />
-		                Chris Allen - Keyboards<br />
-		                Ken Norman - Bass<br />
-		                Lee Dash - Drums<br />
+		                <h3>Track list</h3>
+		                <p>
+                        This is a list of the songs that we could play at any point. Wow, so many songs...
+		                </p>
+                        <p id="tc-trackListMsg">Javascript needs to be enabled.</p>
+                        <p id="tc-trackList"></p>
+		                </p>
 	                </div>
                 </div>
                 <br />
@@ -100,8 +81,9 @@
 
     <br />
 
-<!--script type="text/javascript" src="jquery-2.1.0.js"></script-->
-<!--script type="text/javascript" src="tigerclub-index.js"></script-->
+<script type="text/javascript" src="jquery-2.1.0.js"></script>
+<script type="text/javascript" src="sixistLibrary.js"></script>
+<script type="text/javascript" src="tracklistBody.js"></script>
 
 </body>
 </html>

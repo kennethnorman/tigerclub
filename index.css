@@ -27,6 +27,59 @@ header {
 	font: italic normal 1.4em georgia, sans-serif;
 }
 
+
+.navmenu {
+	font: normal 1.0em georgia, sans-serif;
+    padding: 0; 
+    margin: 0; 
+    list-style: none;
+}
+.navmenu li {
+    float:left; 
+    padding-top:2px;
+}
+.navmenu li a {
+    display:block; 
+    height:38px; 
+    line-height:38px; 
+    padding:0 20px 0 0; 
+    float:left; 
+    background: #23b14d; 
+    color:#000; 
+    text-decoration:none;
+}
+.navmenu li a b {
+    display:block; 
+    height:38px; 
+    float:left; 
+    padding:0 0 0 20px; 
+    background: #23b14d;
+    cursor:pointer;
+}
+
+.navmenu a:hover {
+    background-position:right -51px; 
+    margin-top:-2px; 
+    height:40px;
+}
+.navmenu b:hover {
+    background-position:left -51px;
+    height:40px;
+}
+
+.tc-index #tc-navmenu #home a, 
+.tc-tracklist #tc-navmenu #tracklist a, 
+.tc-history #tc-navmenu #history a {
+    background: #b5e51d; 
+}
+
+.tc-index #tc-navmenu #home b, 
+.tc-tracklist #tc-navmenu #tracklist b, 
+.tc-history #tc-navmenu #history b {
+    background: #b5e51d; 
+}
+
+
 .info {
     float:left;
     width:100%;
@@ -39,7 +92,7 @@ header {
     position:relative;
     right:25%;
 
-	background: #b6ff00 url(info.jpg) no-repeat center center fixed; 
+	background: #b5e51d; //url(info.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -55,7 +108,7 @@ header {
     position:relative;
     overflow:hidden;
 
-	background: #b600ff url(sidebar.jpg) no-repeat center center fixed; 
+	background: #23b14d; //url(sidebar.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -80,21 +133,10 @@ header {
     overflow:hidden;
 }
 
-.music {
+.infotext {
     margin-left: 5%;
 }
-.diary {
-    margin-left: 5%;
-}
-.booking {
-    margin-left: 5%;
-}
-.gallery {
-    margin-left: 5%;
-}
-.theband {
-    margin-left: 5%;
-}
+
 
 .info h3 { 
 	font: italic normal 1.4em georgia, sans-serif;
@@ -122,10 +164,18 @@ header {
 
 .links { 
     margin-left: 5%;
+	font: normal 1.0em georgia, sans-serif;
+}
+.links h3 { 
+	font: italic normal 1.4em georgia, sans-serif;
+	letter-spacing: 1px; 
+	color: #7D775C;
 }
 .links ul { 
     padding:0;
     list-style-type:none;
 }
+
+
 
 
