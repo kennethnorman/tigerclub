@@ -9,7 +9,8 @@ $("tc-allevents").text("Working...");
 // Get the song list from the file list.txt
 var xmlhttp = sixistLibrary.GetXMLHTTPRequest();
 
-var sourceFile = "https://www.google.com/calendar/feeds/5hstrrs3i19g9untj4h7tag7d0%40group.calendar.google.com/public/full?singleevents=true&futureevents=true&orderby=starttime&sortorder=ascending";
+//var sourceFile = "https://www.google.com/calendar/feeds/5hstrrs3i19g9untj4h7tag7d0%40group.calendar.google.com/public/full?singleevents=true&futureevents=true&orderby=starttime&sortorder=ascending";
+var sourceFile = "tiger club.xml";
 xmlhttp.open("GET", sourceFile, true);
 
 // Process the song list into something we can output.
