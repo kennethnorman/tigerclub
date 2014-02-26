@@ -3,36 +3,32 @@
 var nextevent = document.getElementById("tc-nextevent");
 var allevents = document.getElementById("tc-allevents");
 var pagemessage = document.getElementById("tc-pagemessage");
+var foundevents = false;
 $("tc-nextevent").text("Working...");
 $("tc-allevents").text("Working...");
 
-// Get the song list from the file list.txt
-var xmlhttp = sixistLibrary.GetXMLHTTPRequest();
+pagemessage.innerText = "Working...";
 
-//var sourceFile = "https://www.google.com/calendar/feeds/5hstrrs3i19g9untj4h7tag7d0%40group.calendar.google.com/public/full?singleevents=true&futureevents=true&orderby=starttime&sortorder=ascending";
-var sourceFile = "tiger club.xml";
-xmlhttp.open("GET", sourceFile, true);
+$(document).ready(UpdateCalendarEvents("https://www.google.com/calendar/feeds/5hstrrs3i19g9untj4h7tag7d0%40group.calendar.google.com/public/full?singleevents=true&futureevents=true&orderby=starttime&sortorder=ascending&alt=json"));
 
-// Process the song list into something we can output.
-xmlhttp.onreadystatechange = function () {
 
-    var xmlDiary;
+/**/
+function UpdateCalendarEvents(sourceFile) {
 
-    if (xmlhttp.readyState == 4 && (xmlhttp.status == 200 || xmlhttp.status == 0)) {
+    $.getJSON(sourceFile, function (data) {
 
-        pagemessage.innerText = "";
-        $("tc-pagemessage").hide();
+        if (data.feed.entry.length != 0) {
+            pagemessage.innerText = "";
+            $("tc-pagemessage").hide();
+        }
 
-        xmlDiary = xmlhttp.responseXML;
+        $.each(data.feed.entry, function (i, el) {
 
-        var xmlDoc = $.parseXML(xmlhttp.responseText),
-            xml = $(xmlDoc),
-            feed = xml.find("feed");
-
-        $.each(feed.find("entry"), function (i, el) {
             var entry = $(el),
-                title = entry.find("title").text(),
-                when = entry.find("gd\\:when").attr("startTime");
+                title = entry[0].title.$t,
+                when = entry[0].gd$when[0].startTime;
+
+            foundevents = true;
 
             if (nextevent) {
                 if (i === 0) {
@@ -50,17 +46,12 @@ xmlhttp.onreadystatechange = function () {
                 allevents.appendChild(document.createElement("br"));
                 allevents.appendChild(document.createElement("br"));
             }
-         });
+        });
+    })
+    .fail(function () {
+        pagemessage.innerText = "No dates found.";
 
-    }
-    else if (xmlhttp.readyState == 4) {
-        pagemessage.innerText = "Unable to process calendar";
-    }
-    else {
-        pagemessage.innerText = "Processing calendar";
-    }
+    });
+
 }
-xmlhttp.send();
-
-
 
