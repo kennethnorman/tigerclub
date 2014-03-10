@@ -68,12 +68,14 @@ header {
 }
 
 .tc-index #tc-navmenu #home a, 
+.tc-diary #tc-navmenu #diary a, 
 .tc-tracklist #tc-navmenu #tracklist a, 
 .tc-history #tc-navmenu #history a {
     background: #b5e51d; 
 }
 
 .tc-index #tc-navmenu #home b, 
+.tc-diary #tc-navmenu #diary b, 
 .tc-tracklist #tc-navmenu #tracklist b, 
 .tc-history #tc-navmenu #history b {
     background: #b5e51d; 
