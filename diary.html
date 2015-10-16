@@ -12,11 +12,21 @@
 	<meta name="description" content="Tiger Club, quality covers band Peterborough Cambridgeshire East Anglia Midlands.">
 	<meta name="robots" content="all">
 
+	<script type="text/javascript" src="tigerclub-diary.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+
 </head>
 
 
 <body class="tc-diary" id="css-tc-body">
 
+    <div id="authorize-div" style="display: none">
+      <span>Authorize access to Google Calendar API</span>
+      <!--Button for the user to click to initiate auth sequence -->
+      <button id="authorize-button" onclick="handleAuthClick(event)">
+        Authorize
+      </button>
+    </div>
 
 	<section class="intro" id="tc-intro" role="banner">
 		<header>
@@ -46,7 +56,7 @@
 
 	                <div id="tc-infotext1" role="article">
 		                <h3>Come and see us</h3>
-                        <p id="tc-pagemessage">Javascript needs to be enabled.</p>
+                        <p id="tc-pagemessage">Working...</p>
 		                <p id="tc-allevents"></p>
 	                </div>
                 </div>
@@ -82,7 +92,6 @@
 
 <script type="text/javascript" src="jquery-2.1.0.js"></script>
 <script type="text/javascript" src="sixistLibrary.js"></script>
-<script type="text/javascript" src="tigerclub-diary.js"></script>
 
 </body>
 </html>
