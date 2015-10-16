@@ -93,7 +93,8 @@
 				}
             }
           } else {
-            appendMsg('No upcoming events.');
+            appendAllEvents('No upcoming events.');
+            appendNextEvent('No upcoming events.');
           }
 
         });
