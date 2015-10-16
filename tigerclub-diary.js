@@ -1,10 +1,5 @@
 // tigerclub-diary.js
 
-	/*var pm = document.getElementById('tc-pagemessage');
-	if (pm) {
-		pm.innerText = 'Working...';
-	}*/
-
       // Your Client ID can be retrieved from your project in the Google
       // Developer Console, https://console.developers.google.com
       var CLIENT_ID = '1040191233193-jf54albj9gi8s70up20i27l36o393deb.apps.googleusercontent.com';
@@ -73,7 +68,7 @@
           'timeMin': (new Date()).toISOString(),
           'showDeleted': false,
           'singleEvents': true,
-          'maxResults': 20,
+          //'maxResults': 20,
           'orderBy': 'startTime'
         });
 
@@ -90,7 +85,12 @@
               if (!when) {
                 when = event.start.date;
               }
-              appendMsg(new Date(when).toLocaleDateString('en-GB') + ' : ' + event.summary)
+			  var eventText = new Date(when).toLocaleDateString('en-GB') + ' : ' + event.summary
+              appendAllEvents(eventText)
+			  
+				if (i === 0) {
+					appendNextEvent(eventText);
+				}
             }
           } else {
             appendMsg('No upcoming events.');
@@ -105,9 +105,21 @@
        *
        * @param {string} message Text to be placed in element.
        */
-      function appendMsg(message) {
-        var msg = document.getElementById('tc-allevents');
-		msg.appendChild(document.createTextNode(message));
-		msg.appendChild(document.createElement("br"));
-		msg.appendChild(document.createElement("br"));
+      function appendAllEvents(message) {
+        var allEvents = document.getElementById('tc-allevents');
+		if (allEvents) {
+			allEvents.appendChild(document.createTextNode(message));
+			allEvents.appendChild(document.createElement("br"));
+			allEvents.appendChild(document.createElement("br"));
+		}
       }
+
+      function appendNextEvent(message) {
+        var nextEvent = document.getElementById('tc-nextevent');
+		if (nextEvent) {
+			nextEvent.appendChild(document.createTextNode(message));
+			nextEvent.appendChild(document.createElement("br"));
+			nextEvent.appendChild(document.createElement("br"));
+		}
+      }
+	  
