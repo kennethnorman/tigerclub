@@ -1,126 +1,423 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Tiger Club: quality covers band</title>
+<html>
+<title>Tiger Club</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
 
-	<link rel="stylesheet" media="screen" href="index.css">
-	<!-- link rel="alternate" type="application/rss+xml" title="RSS" href="http://www.sixist.co.uk/tigerclub/tigerclub.xml" -->
+<body>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Ken Norman">
-	<meta name="description" content="Tiger Club, quality covers band Peterborough Cambridgeshire East Anglia Midlands.">
-	<meta name="robots" content="all">
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#music" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> MUSIC</a>
+    <a href="#FAQ" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> FAQ</a>
+    <a href="#biog" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> BIOG</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+  </div>
 
-	<script type="text/javascript" src="tigerclub-diary.js"></script>
-    <script src="https://apis.google.com/js/client.js?onload=checkAuth"></script>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#music" class="w3-bar-item w3-button" onclick="toggleFunction()">MUSIC</a>
+    <a href="#FAQ" class="w3-bar-item w3-button" onclick="toggleFunction()">FAQ</a>
+    <a href="#biog" class="w3-bar-item w3-button" onclick="toggleFunction()">BIOG</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+  </div>
+</div>
 
-</head>
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="black-space:nowrap;">
+    <span class="w3-hide-small w3-center w3-padding-large w3-white w3-xlarge w3-wide w3-animate-opacity">TIGER CLUB</span>
+    <span class="w3-hide-medium w3-hide-large w3-center w3-padding-large w3-white w3-medium w3-animate-opacity">TIGER CLUB</span>
+  </div>
+</div>
 
-
-<body class="tc-index" id="css-tc-body">
-
-    <div id="authorize-div" style="display: none">
-      <span>Authorize access to Google Calendar API</span>
-      <!--Button for the user to click to initiate auth sequence -->
-      <button id="authorize-button" onclick="handleAuthClick(event)">
-        Authorize
-      </button>
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT US</h3>
+  <p class="w3-center"><em>A professional 4 piece band, available for weddings, functions, and events of any kind.
+Playing only the best hits from the 60s to now.</em></p>
+  <p>Tiger Club have rapidly built a big reputation as a premium function band. We provide the best mix of dance-floor gems from all eras for weddings, parties and events of all types.
+</p><p>
+Tiger Club are probably the best covers band in the country, considering the average age of the line-up. Let four lifetimes of musical experience caress your ears in sonic bliss. Be warned though, don't let the appearance of these old men fool you; they will make you dance until you've had enough, or the venue closes, whichever is sooner.
+</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>Our services</b></p><br>
+      <img src="Images/Wedding.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Our Services" width="500" height="333">
     </div>
 
+	<div class="w3-col m6 w3-padding-large">
+		<p>Playing all the best party songs from past decades and bringing it bang up to date with recent chart material, Tiger Club cater for any occasion. We provide a multitude of benefits, including:
+		</p>
+		<p>A discreet but powerful quality P.A. and lighting system suitable for any venue.</p>
+		<p>An iPOD connection for your own background music or first dance that we'll play for you.</p>
+		<p>A selection of background music that we'll play for you; you can use this service as an alternative to booking a separate disco & D.J.</p>
+		<p/>
+		<p>
+		We can set up in a small area and only require about an hour to install ourselves.
+		We'll do everything possible to make your special event a success, so anything that you need from a band, just ask and we'll do whatever it takes to achieve this. Learn a special song, no problem; set up at a specific time, let us know when; play between this time and that time, we'll play when you're ready. You'll also find us very competitively priced compared to other bands in the area - call to find out!
+		</p>
+		<p>
+		For a minimal charge, we can also provide live piano accompaniment to your event. Our very own keyboard player will set up and play piano as background music during the function when required. Not only is it more convenient for you, it is considerably less expensive than hiring a separate pianist. Please ask for more details.
+		</p>
+		<p>Our equipment is PAT tested to ensure your safety and we have full Public Liability insurance.</p>
+		<a href="http://www.ampband.co.uk/verify.php" target="_blank"><span style="text-decoration:none">
+		<img style="border:0px" width="160" height="60" src="http://www.ampband.co.uk/secure/images/plivalidator_grey.gif"
+		alt="Check if this Act has current & valid Public Liability Insurance with The Alliance of Musicians & Performers"></span></a>
+	</div>
+  </div>
 
-	<section class="intro" id="tc-intro" role="banner">
-		<header>
-    		<h1>tiger club</h1>
-	    	<h2>playing anything and everything</h2>
-            <h3>you request it, we'll play it.</h3>
-		</header>
-	</section>
+<div>
+<div>
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>Testimonials</b></p><br>
+      <img src="Images/ArmsWide.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+    </div>
+ </div>
+ <div class="m6 w3-center w3-padding-large">
+  <p>"Thanks so much for playing at my 70th birthday - we had a blast, and I even got to dance with some young ladies." - <em>Kim J.</em></p>
 
-    <br />
+  <p>"You're my favourite band. If anyone asks for a recommendation, I'll be telling them about you." - <em>Martin A.</em></p>
 
-    <div class="navheader" id="tc-navheader">
-		<ul class="navmenu" id="tc-navmenu">
-			<li id="home"><a href="index.html"><b>Home</b></a></li>
-			<li id="diary"><a href="diary.html"><b>Diary</b></a></li>
-			<li id="tracklist"><a href="tracklist.html"><b>Track List</b></a></li>
-			<li id="history"><a href="history.html"><b>History</b></a></li>
-		</ul>
+  <p>"You boys made the night. Everyone was dancing right from the first song, and that's never happened before." - <em>Philip B.</em></p>
+</div>
+</div>
 
+</div>
+
+<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">100+</span><br>
+    Songs learned
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">100's</span><br>
+    Gigs done
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">All of them</span><br>
+    Happy Clients
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">100%</span><br>
+    Rating
+  </div>
+</div>
+
+<!-- Second Parallax Image with music Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">MUSIC</span>
+  </div>
+</div>
+
+<!-- Container (music Section) -->
+<div class="w3-content w3-container w3-padding-64" id="music">
+  <h3 class="w3-center">MUSIC</h3>
+  <p class="w3-center"><em>Click on the songs with links to see/hear them</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m6">
+				<a href="../audio/01.mp3">Blurred Lines | Robin Thicke</a><br/>
+				<video id="video1" controls="controls">
+				  <source src="../video/Blurred Lines.ogv" type="video/ogg">
+				  <source src="../video/Blurred Lines.webm" type="video/webm">
+				  <source src="../video/Blurred Lines.mp4" type="video/mp4">
+                   Your browser does not support the video tag. Find it on YouTube instead.
+				</video>
+				<br/>
+				Can't see the video? Watch <a href="https://www.youtube.com/watch?v=mzFGX0lRiUA" target="_blank"><b>here</b></a> instead.
+				<br/>
     </div>
 
-    <div class="column2" id="tc-column2">
-        <div class="column1" id="tc-column1">
-            <div class="info" id="tc-info">
+    <div class="w3-col m6">
+				<a href="../audio/02.mp3">Locked out of heaven | Bruno Marrs</a><br/>
+				<video id="video2" controls="controls">
+				  <source src="../video/Locked Out Of Heaven.ogv" type="video/ogg">
+				  <source src="../video/Locked Out Of Heaven.webm" type="video/webm">
+				  <source src="../video/Locked Out Of Heaven.mp4" type="video/mp4">
+				</video>
+				<br/>
+				Can't see the video? Watch <a href="https://www.youtube.com/watch?v=_6toKaubMyQ" target="_blank"><b>here</b></a> instead.
+				<br/>
+    </div>
+   </div>
 
-                <div class="infotext" id="tc-infotext" >
-  	                <div id="tc-infotext1" role="article">
-		                <h3>What sort of music do we play?</h3>
-		                <p>Anything and everything. If you want it, we'll play it. We already have an extensive set list, though, just in case you can't think of a killer track just now.</p>
-	                </div>
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m6">
+				<a href="../music\03.mp3">Rolling in the deep | Adele</a><br/>
+				<video id="video3" controls="controls">
+				  <source src="../video\Rolling In The Deep.ogv" type="video/ogg">
+				  <source src="../video\Rolling In The Deep.webm" type="video/webm">
+				  <source src="../video\Rolling In The Deep.mp4" type="video/mp4">
+				</video>
+				<br/>
+				Can't see the video? Watch <a href="https://www.youtube.com/watch?v=fTk1LOhYm18" target="_blank"><b>here</b></a> instead.
+				<br/>
+    </div>
 
-	                <div id="tc-infotext2" role="article">
-		                <h3>Where can I see you play next?</h3>
-                        <p id="tc-pagemessage">Working...</p>
-		                <p id="tc-nextevent"></p>
-	                </div>
+    <div class="w3-col m6">
+				<a href="../audio/04.mp3">Hold back the night | Graham Parker</a><br/>
+				<video id="video4" controls="controls">
+				  <source src="../video/Hold Back The Night.ogv" type="video/ogg">
+				  <source src="../video/Hold Back The Night.webm" type="video/webm">
+				  <source src="../video/Hold Back The Night.mp4" type="video/mp4">
+				</video>
+				<br/>
+				Can't see the video? Watch <a href="https://www.youtube.com/watch?v=f1yCORLHV6c" target="_blank"><b>here</b></a> instead.
+				<br/>
+    </div>
+  </div>
 
-	                <div id="tc-infotext3" role="article">
-		                <h3>How can I book you for my venue/function/event?</h3>
-		                <p>Send an email to <a href="mailto:tigerclub@sixist.co.uk">tigerclub@sixist.co.uk</a>.</p>
-	                </div>
+  <div class="w3-row-padding w3-center">
+	<div class="w3-col m6">
+				<a href="../music/05.mp3">Tracks of my tears | Smokey Robinson</a><br/>
+				<video id="video5" controls="controls">
+				  <source src="../video/Tracks Of My Tears.ogv" type="video/ogg">
+				  <source src="../video/Tracks Of My Tears.webm" type="video/webm">
+				  <source src="../video/Tracks Of My Tears.mp4" type="video/mp4">
+				</video>
+				<br/>
+				Can't see the video? Watch <a href="https://www.youtube.com/watch?v=xvveLa81tq0" target="_blank"><b>here</b></a> instead.
+				<br/>
+    </div>
 
-	                <div id="tc-infotext4" role="article">
-		                <h3>Video and Audio Gallery</h3>
+    <div class="w3-col m6">
+				<a href="../audio/06.mp3">Everlasting love | Love Affair</a><br/>
+				<video id="video6" controls="controls">
+				  <source src="../video/Everlasting Love.ogv" type="video/ogg">
+				  <source src="../video/Everlasting Love.webm" type="video/webm">
+				  <source src="../video/Everlasting Love.mp4" type="video/mp4">
+				</video>
+				<br/>
+				Can't see the video? Watch <a href="https://www.youtube.com/watch?v=N7lDrUE6DOU" target="_blank"><b>here</b></a> instead.
+				<br/>
+    </div>
 
-                        <a id="video1" href="#">Video1</a>
-                        <a id="nojsvideo1" href="http://www.youtube.com/watch?v=54wezNzaH_k">Viva La Vida, by Coldplay, recorded live at the Swiss Cottage</a>
-                        <br />
-                        <br />
+    <!--div class="w3-col m6">
+				<a href="../music/07.mp3">Come on Eileen | Dexy's Midnight Runners</a><br/>
+				<audio id="player7" controls="controls">
+				  <source src="../music/07.mp3" type="audio/mpeg">
+				  <source src="../music/07.ogg" type="audio/ogg">
+				</audio>
+				<br/><br/>
+    </div-->
 
-	                </div>
+    <!--button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button-->
+  </div>
+  
+  
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+		<div id="tc-infotext1" role="article">
+			<h3>Track list</h3>
+			<p>
+			This is a list of the songs that we could play at any point. Wow, so many songs...
+			</p>
+			<p id="tc-trackListMsg">Javascript needs to be enabled.</p>
+			<p id="tc-trackList"></p>
+			</p>
+		</div>
+	</div>
+  
+</div>
 
-	                <div id="tc-infotext5" role="article">
-		                <h3>The Band</h3>
-		                Ian Graham - Vox and Guitar<br />
-		                Chris Allen - Keyboards<br />
-		                Ken Norman - Bass<br />
-		                Lee Dash - Drums<br />
-	                </div>
-                </div>
-                <br />
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
 
-	            <div class="infofooter" id="tc-infofooter" role="complementary">
-		            <footer>
-                        <a href="http://sixist.co.uk" title="Copyright (C) *sixist*, 2014" class="tc-footer-html">Created by *sixist*</a>
-		            </footer>
-                </div>
-            </div>
- 
-            <div class="sidebar" id="tc-sidebar">
-                <div class="links" id="tc-links" role="navigation">
-				    <h3>Links:</h3>
-				    <nav>
-					    <ul>
-					    <li>
-						    <a href="/220/" class="links-name"><a href="http://brotherhoodsroundabout.co.uk/" class="links-name">Brotherhood's Roundabout</a>
-					    </li>					
-					    <li>
-						    <a href="/220/" class="links-name"><a href="http://retrolux.co.uk/" class="links-name">Retrolux</a>
-					    </li>					
-					    </ul>
-				    </nav>
-			    </div>
-            </div>
+<!-- Third Parallax Image with FAQ Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">FAQ AND BIOG</span>
+  </div>
+</div>
 
+<!-- Container (FAQ/BIOG Section) -->
+<div class="w3-content w3-container w3-padding-64" id="FAQ">
+  <h3 class="w3-center">FAQ</h3>
+  <p>Tiger Club is a 4 piece band, comprising Guitar, Keyboards, Bass and Drums. We bring our own PA and lights and can play	very loudly and remarkably quietly, even within the same song, to suit the venue and the audience.
+  We play a vast variety of songs from '60s classics to modern hits in all genres. We tune our set list in real time to suit the occasion and the audience on the night.
+  If required, we offer a background music service from our own party playlists, or you can simply give us a suitable device with your own playlist on. 
+  We need enough space to set up our equipment, enough space for you to dance and access to at least two 13 amp power sockets.
+</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>Answers to common questions</b></p><br>
+      <img src="Images/FAQ.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="FAQ" width="500" height="333">
+    </div>
+
+    <!-- text on all devices -->
+    <div class="w3-col m6 w3-padding-large">
+	<p>"Are you available for my party next week/month?" There are only 52 weekends every year and we are often booked up months in advance. You might be lucky, but might not. If you want a repeat booking next year, waiting for 6 months will probably result in disappointment.<p/>
+	<p>"How much do you charge?" We get asked this all the time, but it's difficult to put a specific price forward until we know more details about the event. Prices may vary depending on the date, travel time, time at the event, finish time, number of sets and so on. If you think you have a price in mind, ask yourself whether hiring 4 plumbers/electricians to turn up and fix your plumbing/wiring for about 6 hours and see if it is comparable.</p>
+	<p>Our equipment is PAT tested to ensure your safety and we have full Public Liability insurance.</p>
+	<p>Yes, you can select songs from our set list if you have specific requirements for that special song. We will endeavour to learn any songs we don't already know where possible.</p>
+	<p>We will travel any distance, if the price is right and where it is actually possible. Of course, asking us to go to a bar in Arkansas for $100 is unlikely to meet with approval.</p>
+	<p>We usually need to arrive no later than an hour before we need to be ready (i.e. before guests start to arrive) and we will typically need to soundcheck for a few minutes during this period. Significantly early set-up times may incur additional charges, but ask for clarification - we will try and accomodate all reasonable timing arrangements. Setting up whilst guests are milling around is tricky and to be avoided.</p>
+	<p>If you want to see us in the flesh, we play in a variety of venues around Peterborough fairly regularly. Check local press for details.</p>
+	<p>We wear appropriate clothing for the event, whether that be full dress suits or t-shirts.</p>
+	<p>When it comes to payment, we accept bank transfers before the event, or cheque/cash on (or before) the night.</p>
+    </div>
+	
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+	<p></p>
+	</div>
+</div>
+
+<!-- Container (Biog Section) -->
+<div class="w3-content w3-container w3-padding-64" id="biog">
+  <h3 class="w3-center">BIOG</h3>
+  <p>
+Formed in 2013, Tiger Club have rapidly built a big reputation as a premium function band. We provide the best mix of dance-floor gems from all eras for weddings, parties and events of all types.
+</p>
+<p>
+Hugely experienced musicians, the band is assembled from top local Peterborough bands such as The Motivators, Citizen Smith, Brotherhood's Roundabout and Retrolux.
+</p>
+
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>Ian Graham</b></p><br>
+      <img src="Images/Ian.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Ian" width="300" height="200">
+    </div>
+	<br/><br/><br/><br/>
+     <p>Left-handedness hasn't stopped Ian from being the singer and axe wielder of choice for this band. His gravel-toned voice provides the perfect mix of versatility for the wide range of material we offer. </p>
+   </div>
+
+ <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>Chris Allen</b></p><br>
+      <img src="Images/Chris.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Chris" width="300" height="200">
+    </div>
+	<br/><br/><br/><br/>
+     <p>"Plasticine fingers" and a ready charm with the ladies, Chris is on hand to make sure that all events go without a hitch.</p>
+   </div>
+
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>Ken Norman</b></p><br>
+      <img src="Images/Ken.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Ken" width="300" height="200">
+    </div>
+	<br/><br/><br/><br/>
+     <p>When a four string bass isn't enough, Ken provides more than most.</p>
+   </div>
+
+ <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>Lee Dash</b></p><br>
+      <img src="Images/Lee.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Lee" width="300" height="200">
+    </div>
+	<br/><br/><br/><br/>
+     <p>All the way from South Africa, the rhythms are as exotic as Lee. He also provides a much needed "dash" of hirsute flair.</p>
+   </div>
+
+</div>
+
+</div>
+
+<!-- Fourth Parallax Image with Contact Text -->
+<div class="bgimg-4 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center"><em>If you wish to contact the band about any aspect of our performance, or you have any questions, please reach out to us directly.<br/>We'd love to hear from you.</em></p>
+  <div class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>All locations in the UK. We are  willing to travel (for the right price).<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone - Chris: 07568 338043 ; Ken: 07971 570116<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email - <a href="mailto:tigerclub@sixist.co.uk">tigerclub@sixist.co.uk</a><br>
+      </div>
+      <p><i class="fa fa-coffee"></i> Or leave us a message:</p>
+      <form method="post" action="action.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
         </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
     </div>
+  </div>
+</div>
 
-    <br />
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/Tiger-Club-892018197554801/?ref=br_rs"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <!--i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i-->
+  </div>
+  <p>Created by <a href="http://www.sixist.co.uk" title="*sixist*" target="_blank" class="w3-hover-text-green">*sixist*</a></p>
+  <p>Based on a free template by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
 
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
 <script type="text/javascript" src="jquery-2.1.0.js"></script>
 <script type="text/javascript" src="sixistLibrary.js"></script>
-<script type="text/javascript" src="tigerclub-index.js"></script>
+<script type="text/javascript" src="tracklistBody.js"></script>
 
 </body>
 </html>
