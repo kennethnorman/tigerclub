@@ -5,44 +5,50 @@ body, html {
     line-height: 1.8;
 }
 
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-    background-image: url('Images/TigerClubLargeHeads1.jpg');
-    min-height: 100%;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-    background-image: url('Images/TigerClubHeadsA.jpg');
-    min-height: 100%;
-}
-
-/* Third image (BIOG) */
-.bgimg-3 {
-    background-image: url('Images/TigerClubHeadsB.jpg');
-    min-height: 100%;
-}
-
-/* Fourth image (CONTACT) */
-.bgimg-4 {
-    background-image: url('Images/TigerClubLargeHeads1.jpg');
-    min-height: 100%;
-}
-
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
 
+.logotext {
+	height: 480px;
+	background-color: #e6782c;
+}
+
 /* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
+/*@media only screen and (max-device-width: 1024px) {*/
+/*@media screen and (device-width: 1024px) {*/
+/*@media screen and (min-width: 320px) {*/
+@media screen and (max-resolution: 120dpi) {
+ 	body, html {
+		background-color: #fff;
+		color: #777;
+	}
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+        background-image: url('Images/TigerClubLargeHeads1.jpg');
     }
+    
+    /* Second image (Portfolio) */
+    .bgimg-2 {
+        background-image: url('Images/TigerClubHeadsA.jpg');
+    }
+    
+    /* Third image (BIOG) */
+    .bgimg-3 {
+        background-image: url('Images/TigerClubHeadsB.jpg');
+    }
+    
+    /* Fourth image (CONTACT) */
+    .bgimg-4 {
+        background-image: url('Images/TigerClubLargeHeads1.jpg');
+    }
+	/* Create a Parallax Effect */
+	.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+    	max-width: 100%;
+	    background-attachment: scroll;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-height: 100%;
+	}
 }
